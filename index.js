@@ -13,7 +13,8 @@ app.use(bodyParser.json())
 
 app.post('/api/uploadImageList', (req, res) => {
     var imageArray = new imageList({ images: req.body });
-    imageArray.save()
+    imageArray.save();
+    res.send(req.body)
 })
 
 mongoose.connect('mongodb://imageUpload:imageUpload1@ds151596.mlab.com:51596/image_database');
