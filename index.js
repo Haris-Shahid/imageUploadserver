@@ -10,7 +10,6 @@ app.use(cors());
 var bodyParser = require('body-parser');
 app.use(bodyParser.json())
 
-
 app.post('/api/uploadImageList', (req, res) => {
     var imageArray = new imageList({ images: req.body });
     imageArray.save();
